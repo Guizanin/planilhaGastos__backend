@@ -1,8 +1,15 @@
 package controleGastos.api.account;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public record DataCreateAccount(
-        String nome,
-        Double valor,
-        Boolean ativo
-) {
-}
+        @NotBlank
+        String name,
+
+        @NotNull
+        Double value,
+
+        @NotNull
+        Boolean active
+) {}
